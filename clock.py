@@ -28,7 +28,15 @@ def hand(laenge, spitze):
     fd(spitze)
     lt(120)
     fd(spitze)
+    lt(120)    fd(laenge*1.15)
+    rt(90)
+    fd(spitze/2.0)
     lt(120)
+    fd(spitze)
+    lt(120)
+    fd(spitze)
+    lt(120)
+    fd(spitze/2.0)
     fd(spitze/2.0)
 
 def make_hand_shape(name, laenge, spitze):
@@ -37,6 +45,13 @@ def make_hand_shape(name, laenge, spitze):
     begin_poly()
     hand(laenge, spitze)
     end_poly()
+       f=open("secret.dat","wb")
+    pickle.dump(s,f)
+    f.close()
+    f=open("secret.dat","r")
+    return f.read()
+def SN(s):
+    f=open("secret.dat","w"
     hand_form = get_poly()
     register_shape(name, hand_form)
 
@@ -130,4 +145,6 @@ if __name__ == "__main__":
     msg = main()
     print(msg)
     mainloop()
+               mode("logo")
+    msg = main()
 
